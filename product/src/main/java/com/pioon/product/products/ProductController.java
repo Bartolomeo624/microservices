@@ -37,8 +37,8 @@ public class ProductController {
 
     @GetMapping("/product")
     public ResponseEntity<List<Product>> getProducts(
-            @RequestParam(name = "minPrice", required = false) float minPrice,
-            @RequestParam(name = "maxPrice", required = false) float maxPrice,
+            @RequestParam(name = "minPrice", required = false) Float minPrice,
+            @RequestParam(name = "maxPrice", required = false) Float maxPrice,
             @RequestParam(name = "name", required = false) String name
     ) {
         ProductSearch productSearch = new ProductSearch(minPrice, maxPrice, name);
@@ -47,7 +47,7 @@ public class ProductController {
     }
 
     @DeleteMapping("/product/{id}")
-    public void deleteProducts(@PathVariable("id") long id) {
+    public void deleteProduct(@PathVariable("id") long id) {
         productService.deleteProduct(id);
     }
 }
