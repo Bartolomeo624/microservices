@@ -19,6 +19,8 @@
         <module>review</module>
         <module>cart-orders</module>
         <module>discovery-server</module>
+        <module>api-gateway</module>
+        <module>auth</module>
     </modules>
 
     <properties>
