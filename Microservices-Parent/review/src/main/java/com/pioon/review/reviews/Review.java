@@ -15,7 +15,7 @@ import lombok.*;
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long reviewId;
     private long userId;
     private long productId;
 

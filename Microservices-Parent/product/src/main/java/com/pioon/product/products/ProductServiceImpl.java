@@ -21,7 +21,7 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Product updateProduct(Product product) {
-        if(productRepository.existsById(product.getId())) {
+        if(productRepository.existsById(product.getProductId())) {
             saveProduct(product);
         }
         throw new RuntimeException("Product does not exist");
@@ -58,18 +58,18 @@ public class ProductServiceImpl implements ProductService{
         boolean isNameGiven = productSearch.getName() != null;
 
         if (isPriceRangeGiven && isNameGiven) {
-            return productRepository.findProductsByPriceBetweenAndNameContainingIgnoreCase(
+            return productRepository.findProductsByProductPriceBetweenAndProductNameContainingIgnoreCase(
                     productSearch.getMinPrice(),
                     productSearch.getMaxPrice(),
                     productSearch.getName()
             );
         } else if (isPriceRangeGiven) {
-            return productRepository.findProductsByPriceBetween(
+            return productRepository.findProductsByProductPriceBetween(
                     productSearch.getMinPrice(),
                     productSearch.getMaxPrice()
             );
         } else if (isNameGiven) {
-            return productRepository.findProductsByNameContainingIgnoreCase(
+            return productRepository.findProductsByProductNameContainingIgnoreCase(
                     productSearch.getName()
             );
         } else {

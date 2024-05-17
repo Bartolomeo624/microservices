@@ -1,11 +1,13 @@
 package com.pioon.cart;
 
+import com.pioon.order.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class CartController {
@@ -24,10 +26,22 @@ public class CartController {
         Cart cart = cartService.getCart(id);
         return new ResponseEntity<>(cart,HttpStatus.OK);
     }
+
+    @GetMapping("/cart/full/{id}")
+    public ResponseEntity<Map<String, Object>> getCartWithProduct(@PathVariable("id") long id){
+        Map<String, Object> cart = cartService.getCartWithProduct(id);
+        return new ResponseEntity<>(cart,HttpStatus.OK);
+    }
     @PutMapping("/cart")
     public ResponseEntity<Cart> updateCart(@RequestBody Cart cart){
         Cart updatedCart = cartService.updateCart(cart);
         return new ResponseEntity<>(updatedCart,HttpStatus.OK);
+    }
+
+    @PutMapping("/cart/addProduct/{id}")
+    public ResponseEntity<Cart> addProductToCart(@PathVariable("id") long id, @RequestBody long productId){
+        Cart cart = cartService.addProduct(cartService.getCart(id), productId);
+        return new ResponseEntity<>(cart,HttpStatus.OK );
     }
 
     @GetMapping("/cart")
@@ -38,4 +52,10 @@ public class CartController {
 
     @DeleteMapping("/cart/{id}")
     public void deleteCart(@PathVariable("id") long id){ cartService.deleteCart(id);}
+
+    @GetMapping("/cart/check")
+    public boolean checkIfProductExists(@RequestParam List<Long> idList){
+
+        return cartService.cartExists(idList);
+    }
 }

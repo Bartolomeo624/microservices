@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -26,6 +27,12 @@ public class ReviewController {
     public ResponseEntity<Review> getReview(@PathVariable("id") long id){
         Review review = reviewService.getReview(id);
         return new ResponseEntity<>(review, HttpStatus.OK);
+    }
+
+    @GetMapping("/review/full/{id}")
+    public ResponseEntity<Map<String, Object>> getReviewWithProduct(@PathVariable("id") long id){
+        Map<String, Object> review = reviewService.getReviewWithProduct(id);
+        return new ResponseEntity<>(review,HttpStatus.OK);
     }
     @PutMapping("/review")
     public ResponseEntity<Review> updateReview(@RequestBody Review review){

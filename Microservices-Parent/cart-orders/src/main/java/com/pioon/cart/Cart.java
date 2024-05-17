@@ -23,5 +23,4 @@ public class Cart {
     private long userId;
     private String userName;
     private List<Long> productIdList;
-
 }

@@ -1,6 +1,5 @@
-package com.pioon.cart;
+package com.pioon.review.reviews;
 
-import jakarta.persistence.*;
 import lombok.*;
 
 

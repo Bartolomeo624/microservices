@@ -14,8 +14,8 @@ import lombok.*;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    private String name;
-    private float price;
+    private long productId;
+    private String productName;
+    private float productPrice;
 }
 

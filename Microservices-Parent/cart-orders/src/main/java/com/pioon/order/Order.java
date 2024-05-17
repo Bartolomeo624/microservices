@@ -18,9 +18,9 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long orderId;
 
     private String orderStatus;
-    private List<Long> cartId;
+    private List<Long> cartIdList;
 
 }
