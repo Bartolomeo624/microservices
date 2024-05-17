@@ -17,25 +17,25 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @PostMapping("/product")
+    @PostMapping("/products")
     public ResponseEntity<Product> saveProduct(@RequestBody Product product) {
         Product newProduct = productService.createProduct(product);
         return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
     }
 
-    @PutMapping("/product")
+    @PutMapping("/products")
     public ResponseEntity<Product> updateProduct(@RequestBody Product product) {
         Product updatedProduct = productService.updateProduct(product);
         return new ResponseEntity<>(updatedProduct, HttpStatus.OK);
     }
 
-    @GetMapping("/product/{id}")
+    @GetMapping("/products/{id}")
     public ResponseEntity<Product> getProduct(@PathVariable("id") long id) {
         Product product = productService.getProduct(id);
         return new ResponseEntity<>(product, HttpStatus.OK);
     }
 
-    @GetMapping("/product")
+    @GetMapping("/products")
     public ResponseEntity<List<Product>> getProducts(
             @RequestParam(name = "minPrice", required = false) Float minPrice,
             @RequestParam(name = "maxPrice", required = false) Float maxPrice,

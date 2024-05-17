@@ -33,8 +33,13 @@ public class JwtAuthController {
         }
     }
 
-    @GetMapping("/validate")
-    public boolean validateToken(@RequestParam("token") String token) {
-        return authService.validateToken(token);
+    @PostMapping("/validate")
+    public boolean validateToken(@RequestHeader("Authorization") String authHeader) {
+        if (authHeader != null && authHeader.startsWith("Bearer ")) {
+            String token = authHeader.substring(7);
+            return authService.validateToken(token);
+        } else {
+            throw new RuntimeException("Invalid authorization header format");
+        }
     }
 }
