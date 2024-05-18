@@ -29,12 +29,12 @@ public class JwtAuthController {
         if (authenticate.isAuthenticated()) {
             return authService.generateToken(authRequest.getUsername());
         } else {
-            throw new RuntimeException("invalid access");
+            throw new RuntimeException("Invalid access");
         }
     }
 
     @PostMapping("/validate")
-    public boolean validateToken(@RequestHeader("Authorization") String authHeader) {
+    public Boolean validateToken(@RequestHeader("Authorization") String authHeader) {
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String token = authHeader.substring(7);
             return authService.validateToken(token);

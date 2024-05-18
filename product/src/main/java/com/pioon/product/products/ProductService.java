@@ -10,4 +10,5 @@ public interface ProductService {
 
     List<Product> getAllProducts();
     List<Product> findProducts(ProductSearch productSearch);
+    boolean productExists(List<Long> idList);
 }

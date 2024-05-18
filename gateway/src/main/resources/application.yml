@@ -3,7 +3,7 @@ spring:
     gateway:
       routes:
         - id: auth
-          uri: lb://AUTH
+          uri: lb://AUTH-SERVICE
           predicates:
             - Path=/auth/**, /users/**
           filters:
@@ -12,6 +12,12 @@ spring:
           uri: lb://PRODUCT
           predicates:
             - Path=/products/**
+          filters:
+            - AuthFilter
+        - id: cart-orders
+          uri: lb://CART-ORDERS
+          predicates:
+            - Path=/order/**, /cart/**
           filters:
             - AuthFilter
 

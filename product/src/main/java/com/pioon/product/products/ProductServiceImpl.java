@@ -3,6 +3,7 @@ package com.pioon.product.products;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -73,6 +74,18 @@ public class ProductServiceImpl implements ProductService{
         } else {
             return getAllProducts();
         }
+    }
+
+    @Override
+    public boolean productExists(List<Long> idList) {
+        List<Boolean> objectCheck = new ArrayList<>();
+
+        for (long productId : idList){
+            boolean productExists = productRepository.findById(productId).isPresent();
+
+            objectCheck.add(productExists);
+        }
+        return objectCheck.stream().allMatch(Boolean::booleanValue);
     }
 
     private Product saveProduct(Product product) {

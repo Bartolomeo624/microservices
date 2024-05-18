@@ -46,8 +46,14 @@ public class ProductController {
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-    @DeleteMapping("/product/{id}")
+    @DeleteMapping("/products/{id}")
     public void deleteProduct(@PathVariable("id") long id) {
         productService.deleteProduct(id);
+    }
+
+    @PostMapping("/products/check")
+    public boolean checkIfProductExists(@RequestBody ProductIdListDTO productList){
+
+        return productService.productExists(productList.getProductIDs());
     }
 }
