@@ -1,0 +1,14 @@
+com/pioon/review/RestMessage.class
+com/pioon/review/consumers/ProductDTO$ProductDTOBuilder.class
+com/pioon/review/reviews/ReviewController.class
+com/pioon/review/consumers/ProductApiClient.class
+com/pioon/review/reviews/Review$ReviewBuilder.class
+com/pioon/review/reviews/ReviewService.class
+com/pioon/review/reviews/Review.class
+com/pioon/review/consumers/ProductDTO.class
+com/pioon/review/consumers/ProductIdListDTO.class
+com/pioon/review/reviews/ReviewRepository.class
+com/pioon/review/ReviewApplication.class
+com/pioon/review/RestExceptionHandler.class
+com/pioon/review/reviews/ReviewServiceImpl.class
+com/pioon/review/config/WebClientConfig.class

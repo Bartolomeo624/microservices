@@ -1,0 +1,12 @@
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/consumers/ProductIdListDTO.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/reviews/ReviewServiceImpl.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/RestExceptionHandler.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/reviews/ReviewController.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/config/WebClientConfig.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/reviews/Review.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/ReviewApplication.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/RestMessage.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/consumers/ProductDTO.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/reviews/ReviewRepository.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/reviews/ReviewService.java
+/home/bartolomeo/aeh/mikroserwisy/review/src/main/java/com/pioon/review/consumers/ProductApiClient.java

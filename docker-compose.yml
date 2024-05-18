@@ -1,0 +1,63 @@
+version: '3.8'
+services:
+  eureka-server:
+    image: eurekaserver-service
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8761/actuator/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  product-service:
+    image: product-service
+    container_name: product-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+
+  cart-order-service:
+    image: cart-orders-service
+    container_name: cart-order-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      product-service:
+        condition: service_started
+
+  review-service:
+    image: review-service
+    container_name: review-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      product-service:
+        condition: service_started
+
+  auth-service:
+    image: auth-service
+    container_name: auth-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+
+  gateway-service:
+    image: gateway-service
+    container_name: gateway-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      auth-service:
+        condition: service_started
