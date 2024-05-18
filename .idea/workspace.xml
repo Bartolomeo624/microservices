@@ -5,55 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1124c996-4e42-40cf-8aa4-2020b1209895" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/eurekaserver/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/CartOrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/CartOrderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/RestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/RestExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/RestMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/RestMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/cart/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cart/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/cart/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cart/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/cart/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cart/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/cart/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cart/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/cart/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/config/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/consumers/ProductApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/consumers/ProductApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/consumers/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/consumers/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/consumers/ProductIdListDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/consumers/ProductIdListDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/order/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/order/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/order/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/order/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/order/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/order/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/order/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/java/com/pioon/cartorder/order/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-orders/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/CartOrderApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/RestExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/RestMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/cart/Cart$CartBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/cart/Cart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/cart/CartController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/cart/CartRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/cart/CartService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/cart/CartServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/config/AppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/config/WebClientConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/consumers/ProductApiClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/consumers/ProductDTO$ProductDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/consumers/ProductDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/consumers/ProductIdListDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/order/Order$OrderBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/order/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/order/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/order/OrderRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/order/OrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-orders/target/classes/com/pioon/order/OrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/review/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/review/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +32,8 @@
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -111,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715861099745</updated>
       <workItem from="1715861101965" duration="57000" />
-      <workItem from="1716065705042" duration="6397000" />
+      <workItem from="1716065705042" duration="7911000" />
     </task>
     <servers />
   </component>
