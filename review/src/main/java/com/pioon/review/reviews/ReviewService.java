@@ -1,15 +1,20 @@
 package com.pioon.review.reviews;
 
+import reactor.core.publisher.Mono;
 import java.util.List;
 import java.util.Map;
 
 public interface ReviewService {
 
-    Review createReview(Review review);
-    Review updateReview(Review review);
-    void deleteReview(long id);
-    Review getReview(long id);
+    Mono<Review> createReview(Review review);
 
-    Map<String, Object> getReviewWithProduct(long id);
-    List<Review> getAllReviews();
+    Mono<Review> updateReview(Review review);
+
+    Mono<Void> deleteReview(long id);
+
+    Mono<Review> getReview(long id);
+
+    Mono<Map<String, Object>> getReviewWithProduct(long id);
+
+    Mono<List<Review>> getAllReviews();
 }

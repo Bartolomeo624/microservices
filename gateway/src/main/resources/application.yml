@@ -20,6 +20,12 @@ spring:
             - Path=/order/**, /cart/**
           filters:
             - AuthFilter
+        - id: review
+          uri: lb://REVIEW
+          predicates:
+            - Path=/review/**
+          filters:
+            - AuthFilter
 
 eureka:
   client:

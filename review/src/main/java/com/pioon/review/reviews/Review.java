@@ -16,7 +16,7 @@ public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long reviewId;
-    private long userId;
+    private String userId;
     private long productId;
 
     private float stars;
