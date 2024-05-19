@@ -3,9 +3,15 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
+#      defaultZone: http://localhost:8761/eureka/
       defaultZone: http://eureka-server:8761/eureka/
   instance:
     prefer-ip-address: true
+
+spring:
+  cache:
+    type: caffeine
+    spec: initialCapacity=100,maximumSize=500, expireAfterAccess=600s
 
 server:
   port: 8081

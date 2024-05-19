@@ -1,6 +1,8 @@
 package com.pioon.product.products;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -19,14 +21,16 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    @CacheEvict(value = "product", key = "#product.id")
     public Product updateProduct(Product product) {
         if(productRepository.existsById(product.getId())) {
-            saveProduct(product);
+            return saveProduct(product);
         }
         throw new RuntimeException("Product does not exist");
     }
 
     @Override
+    @CacheEvict(value = "product", key = "#id")
     public void deleteProduct(long id) {
         if(productRepository.existsById(id)) {
             productRepository.deleteById(id);
@@ -34,6 +38,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    @Cacheable("product")
     public Product getProduct(long id) {
         Optional<Product> product = productRepository.findById(id);
         if (product.isPresent()) {
@@ -45,12 +50,19 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    @Cacheable("product")
     public List<Product> getAllProducts() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return (List<Product>) productRepository.findAll();
     }
 
 
     @Override
+    @Cacheable("product")
     public List<Product> findProducts(ProductSearch productSearch) {
         boolean isPriceRangeGiven = (productSearch.getMinPrice() != null
                 && productSearch.getMaxPrice() != null);
@@ -77,6 +89,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    @Cacheable("product")
     public boolean productExists(List<Long> idList) {
         List<Boolean> objectCheck = new ArrayList<>();
 

@@ -35,6 +35,12 @@ public class ProductController {
         return new ResponseEntity<>(product, HttpStatus.OK);
     }
 
+    @GetMapping("/products/all")
+    public ResponseEntity<List<Product>> getAllProducts() {
+        List<Product> products = productService.getAllProducts();
+        return new ResponseEntity<>(products, HttpStatus.OK);
+    }
+
     @GetMapping("/products")
     public ResponseEntity<List<Product>> getProducts(
             @RequestParam(name = "minPrice", required = false) Float minPrice,
