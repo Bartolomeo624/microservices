@@ -57,3 +57,46 @@ Follow these steps to set up and run the project:
    docker-compose down
     docker-compose up -d
    ```
+
+
+## Architecture
+
+![alt text](docs/architecture.png)
+
+## Example endpoints
+
+detailed API documentation for each service is available in .json format
+- docs/Auth.postman_collection.json
+- docs/Product.postman_collection.json
+- docs/Cart-Orders.postman_collection.json
+- docs/Review.postman_collection.json
+
+1. Auth service
+
+- create user
+
+ ![alt text](docs/image.png)
+
+- get the token
+
+ ![alt text](docs/image-1.png)
+
+2. Procuct service
+
+- create product
+
+ ![alt text](docs/image-2.png)
+
+- filter products
+
+ ![alt text](docs/image-3.png)
+
+3. Cart-Orders service
+
+- create cart
+
+![alt text](docs/image-4.png)
+
+- get full cart
+
+![alt text](docs/image-5.png)

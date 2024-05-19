@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "6700ef91-6647-4816-a2ba-1fdc56dabe25",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13603178",
+		"_collection_link": "https://lively-rocket-768131.postman.co/workspace/e0773417-259a-4bce-92e5-d6420d3299fc/collection/13603178-6700ef91-6647-4816-a2ba-1fdc56dabe25?action=share&source=collection_link&creator=13603178"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"bartek\",\n    \"email\": \"bartek@rat.com\",\n    \"password\": \"ebe-ebe-123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"bartek\",\n    \"password\": \"ebe-ebe-123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/token",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYXJ0ZWsiLCJpYXQiOjE3MTU5MDAxMjMsImV4cCI6MTcxNTkwMTkyM30.kVQCUKM-KNmrBWXqop1tw4Q4-k_iQQXay3GnTLs5_7o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/validate",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYXJ0ZWsiLCJpYXQiOjE3MTU5MDAxMjMsImV4cCI6MTcxNTkwMTkyM30.kVQCUKM-KNmrBWXqop1tw4Q4-k_iQQXay3GnTLs5_7o",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

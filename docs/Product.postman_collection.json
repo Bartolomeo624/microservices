@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "0dfe05b7-63f9-4c1e-967b-60045727dc4c",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13603178",
+		"_collection_link": "https://lively-rocket-768131.postman.co/workspace/e0773417-259a-4bce-92e5-d6420d3299fc/collection/13603178-0dfe05b7-63f9-4c1e-967b-60045727dc4c?action=share&source=collection_link&creator=13603178"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products?minPrice=10.0&maxPrice=11000.0",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "10.0"
+						},
+						{
+							"key": "maxPrice",
+							"value": "11000.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products?minPrice=10.0&maxPrice=11000.0",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "10.0"
+						},
+						{
+							"key": "maxPrice",
+							"value": "11000.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products?minPrice=10.0&maxPrice=11000.0",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "10.0"
+						},
+						{
+							"key": "maxPrice",
+							"value": "11000.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\n//    \"name\": \"beer-2\",\n//    \"price\": 19.50 \n// }\n\n// {\n//    \"name\": \"lopata\",\n//    \"price\": 102.99 \n// }\n\n// {\n//    \"name\": \"grabie\",\n//    \"price\": 192.99 \n// }\n\n// {\n//    \"name\": \"bmw\",\n//    \"price\": 80000.99 \n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productIDs\": [1,2]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products/check",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 1,\r\n    \"productName\": \"Kitchen Knife\",\r\n    \"productPrice\": 20.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYXJ0ZWsiLCJpYXQiOjE3MTYxMDQxNjUsImV4cCI6MTcxNjEwNTk2NX0.ltaBm1qHDtQ1UZUL_jiKqB3P4e17uvcUJGVCnLEzBQo",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

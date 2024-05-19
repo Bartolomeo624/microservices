@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "5b34a1a7-5392-4702-b463-b465902911de",
+		"name": "Review",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13603178",
+		"_collection_link": "https://lively-rocket-768131.postman.co/workspace/e0773417-259a-4bce-92e5-d6420d3299fc/collection/13603178-5b34a1a7-5392-4702-b463-b465902911de?action=share&source=collection_link&creator=13603178"
+	},
+	"item": [
+		{
+			"name": "Create Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"user123\",\n    \"productId\": 1,\n    \"stars\": 4.5,\n    \"text\": \"Great product, highly recommended!\",\n    \"userName\": \"John Doe\",\n    \"productName\": \"Awesome Gadget\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/review",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Review",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/review/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"review",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reviews",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/review/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"review",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Review",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/review/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"review",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Review",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reviewId\": 1,\n    \"userId\": \"user321\",\n    \"productId\": 1,\n    \"stars\": 3.0,\n    \"text\": \"Great product, highly recommended!\",\n    \"userName\": \"John Doe\",\n    \"productName\": \"Awesome Gadget\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/review",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Review Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": 1,\n  \"userName\": \"bartek\",\n  \"productIdList\": [1,2]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/review/full/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"review",
+						"full",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYXJ0ZWsiLCJpYXQiOjE3MTYxMDQxNjUsImV4cCI6MTcxNjEwNTk2NX0.ltaBm1qHDtQ1UZUL_jiKqB3P4e17uvcUJGVCnLEzBQo",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
